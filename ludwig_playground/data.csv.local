@@ -1,0 +1,5 @@
+query,skus_in_session,path
+nike,SKU_1,shoes sneakers
+lebron shoes,SKU_12 SKU_65,sport basketball shoes
+nadal shorts,SKU_1 SKU_22 SKU_32,sport tennis nadal
+
