@@ -23,7 +23,10 @@ Blog post and code are inspired by our [research paper](https://arxiv.org/abs/20
 ### Setup
 
 Code has been written for Python 3.7 - the provided `requirements.txt` can be used with a [virtualenv](https://virtualenv.pypa.io/en/latest/)
-to run the project in a separate virtual environment.
+to run the project in a separate virtual environment. 
+
+Credentials and global parameters can be set with the standard `.env` file (`*.env.local` is provided as a template), and 
+they are available in the pipeline script through [dotenv](https://pypi.org/project/python-dotenv/).
 
 
 ### Repo Structure
