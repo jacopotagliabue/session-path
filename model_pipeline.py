@@ -1,3 +1,21 @@
+"""
+
+This script runs a local Luigi pipeline that goes from zero to a fully trained and tested Ludwig model.
+The pipeline stores the sequence of the intermediate models and feature files in a timestamp-based folder:
+to re-run specific sequences, the folder name can be specified in the init process at the bottom.
+
+The pipeline has four steps:
+
+1. train prod2vec model on user behavior
+2. prepare training and testing dataset as Ludwig-friendly csv files
+3. define and train Ludwig model
+4. re-load and test Ludwig model
+
+If you already have files for embeddings and the dataset, you can also just try out ludwig with the stand-alone
+script in the ludwig_playground folder.
+
+"""
+
 import os
 import csv
 import json

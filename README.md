@@ -62,7 +62,8 @@ if your search logs (e.g. products clicked after a search) report product identi
 products with paths to prepare the final dataset.
 
 #### Standalone Ludwig training
-If you already have embeddings ready (in Glove format) and a dataset file, you can put them in the `ludwig_playground`
+If you already have embeddings ready (stored in a tab-separated text file, as in 
+the ["Glove format"](https://radimrehurek.com/gensim/scripts/glove2word2vec.html)) and a dataset file, you can put them in the `ludwig_playground`
 folder and play directly with Ludwig code with no other dependency: `ludwig_playground.py` have some global variables
 you can set to re-run training, or just running a trained model on new input rows.
 

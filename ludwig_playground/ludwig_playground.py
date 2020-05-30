@@ -1,9 +1,21 @@
+"""
+
+This script is a stand-alone entry point to train SessionPath with Ludwig starting from existing files.
+You will need a prod2vec.tsv for embeddings and a data.csv for the training set - sample formats are included
+in this folder.
+
+The hello_ludwig script is a simple function that wraps Ludwig training and testing methods, with a couple of options
+to let you easily try out model behavior on specific input pairs, or avoid training if you wish to re-use
+the model in the folder.
+
+"""
+
 import os
 from logging import DEBUG
 from ludwig.api import LudwigModel
 
 # script variables
-FOLDER = os.path.dirname(os.path.abspath(__file__)) # folder is the current playground one
+FOLDER = os.path.dirname(os.path.abspath(__file__))  # folder is the current one with the playground script
 LUDWIG_MODEL_DEFINITION = {
     'input_features': [
         {'name': 'skus_in_session', 'type': 'set',
@@ -17,7 +29,7 @@ LUDWIG_MODEL_DEFINITION = {
     ],
     'training': {'epochs': 100, 'early_stopping': 5}
 }
-DATASET ='data.csv'
+DATASET = 'data.csv'
 # if false, skip training, if true, train and test on dataset from scratch
 # after model is trained once, you can set it to False to just generate predictions
 IS_TRAINING = True

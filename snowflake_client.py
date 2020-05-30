@@ -1,3 +1,10 @@
+"""
+
+Template snowflake class to connect to Snowflake and run queries.
+Improve/extend/swap with your own database client class!
+
+"""
+
 import sys
 import snowflake.connector
 from snowflake.connector import DictCursor

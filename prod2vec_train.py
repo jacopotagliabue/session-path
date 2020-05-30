@@ -4,6 +4,17 @@ from snowflake_client import SnowflakeClient
 
 
 def train_product_2_vec_model(sessions, min_c=2, size=48, window=3, iterations=20, ns_exponent=0.75):
+    """
+    Wrap gensim standard word2vec model, providing sensible parameters from other experiments with prod2vec.
+
+    :param sessions: list of list of strings
+    :param min_c: gensim param
+    :param size: gensim param
+    :param window: gensim param
+    :param iterations: gensim param
+    :param ns_exponent: gensim param
+    :return: gensim Keyed Vector object after training
+    """
     model = gensim.models.Word2Vec(
         sessions,
         min_count=min_c,
@@ -23,37 +34,20 @@ def get_products_in_session_from_snowflake(
     min_size: int=2,
     max_size: int=50
 ):
-    sql_query = """
-        SELECT
-          a."SKUS"
-        FROM
-          (
-            SELECT
-              augmented_skus."session_id",
-              ARRAY_AGG(augmented_skus."SKU") WITHIN GROUP (
-                ORDER BY augmented_skus."server_timestamp_epoch_ms" ASC
-              ) AS SKUS
-            FROM
-              (
-                SELECT
-                  ev."session_id",
-                  ev."server_timestamp_epoch_ms",
-                  LOWER(ev."product_sku") as sku
-                FROM TOOSEO.SSOT.SESSIONIZED_PROD AS ev
-                WHERE
-                  ev."server_environment_id" = %(env_id)s AND
-                  ev."user_device" != 'bot' AND
-                  ev."server_date" >= %(start_date)s AND
-                  ev."server_date" < %(end_date)s AND
-                  ev."product_action" = 'detail'
-              )augmented_skus
-            GROUP BY augmented_skus."session_id"
-          )a
-        WHERE
-          ARRAY_SIZE(a."SKUS") >= %(min_size)s AND
-          ARRAY_SIZE(a."SKUS") < %(max_size)s
-        ORDER BY a."session_id";
     """
+    Template function to get products in all sessions from a SQL database. Result is a list of list, each list
+    containing the sequence of SKU for the products viewed in a shopping sessions.
+
+    :param snowflake_client: Python class to connect to a remote database
+    :param env_id: client id
+    :param start_date: start date
+    :param end_date: end date
+    :param min_size: specify a minimum session length to avoid sessions too short (1 product)
+    :param max_size: specify a maximum session length to avoid sessions that are suspiciously long (100 products)
+    :return: list of lists of strings, each string is an SKU in a session
+    """
+    sql_query = """"""
+    raise Exception("Need to implement this!")
     # get rows
     rows = snowflake_client.fetch_all(
         sql_query,
@@ -64,7 +58,7 @@ def get_products_in_session_from_snowflake(
             'min_size': min_size,
             'max_size': max_size
         },
-        debug=True)
+        debug=False)
 
     # need to de-serialize from snowflake
     return [json.loads(s['SKUS']) for s in rows]
