@@ -74,7 +74,7 @@ The `*.local` files in the folder show the accepted format for a dataset and an 
 
 ### Acknowledgments
 This repo is a joint effort of [Jacopo](http://www.jacopotagliabue.it/), 
-[Christine](https://www.linkedin.com/in/bingqing-christine-yu/)
+[Bingqing](https://www.linkedin.com/in/bingqing-christine-yu/)
  and [Marie](https://www.linkedin.com/in/marie-beaulieu-462949135/). 
 
 We wish to thank our friend [Piero Molino](https://github.com/w4nderlust), 
@@ -88,7 +88,7 @@ If you find this repo (and the ideas in it) useful for your research, please cit
 
 Jacopo Tagliabue, Bingqing Yu, Marie Beaulieu, 2020, 
 "How to Grow a (Product) Tree: Personalized Category Suggestions for eCommerce Type-Ahead",
-Proceeding of ACL 2020, Seattle, US.
+Companion Proceedings of ACL 2020, Seattle, US.
 
 The arxiv version is available [here](https://arxiv.org/abs/2005.12781).
 

@@ -34,7 +34,7 @@ DATASET = 'data.csv'
 # after model is trained once, you can set it to False to just generate predictions
 IS_TRAINING = True
 PREDICTIONS = {
-    'skus_in_session': ['040187801_005'],
+    'skus_in_session': ['SKU_123'],
     'query': ['nike jordan']
 }
 # if not empty, it needs to follow ludwig specs: https://uber.github.io/ludwig/api/LudwigModel/#predict
