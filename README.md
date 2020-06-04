@@ -86,9 +86,16 @@ us how to re-write our model (_SessionPath_) with Ludwig.
 If you find this repo (and the ideas in it) useful for your research, please cite our
 [ECNLP](https://sites.google.com/view/ecnlp/acl-2020?authuser=0) work @ ACL:
 
-Jacopo Tagliabue, Bingqing Yu, Marie Beaulieu, 2020, 
-"How to Grow a (Product) Tree: Personalized Category Suggestions for eCommerce Type-Ahead",
-Companion Proceedings of ACL 2020, Seattle, US.
+```@inproceedings{TagliabueACL2020,
+author = {Tagliabue, Jacopo and Yu, Bingqing and Beaulieu, Marie},
+title = {How to Grow a (Product) Tree. Personalized Category Suggestions for eCommerce Type-Ahead},
+year = {2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+booktitle = {Companion Proceedings of ACL},
+location = {Seattle, USA}
+}
+```
 
 The arxiv version is available [here](https://arxiv.org/abs/2005.12781).
 
