@@ -15,7 +15,7 @@ A typical type-ahead experience is this one:
 What we are trying to build is a _smarter_ system, one that suggests different categories depending on contextual
 factors as well (e.g. the products the user interacted with):
 
-![Dynamic Category Suggestion Example](/images/personalized_category.jpg)
+![Dynamic Category Suggestion Example](/images/personalized_category.png)
 
 Blog post and code are inspired by our [research paper](https://arxiv.org/abs/2005.12781) presented @ ACL 2020: 
 [How to Grow a (Product) Tree](https://blog.coveo.com/clothes-in-space-real-time-personalization-in-less-than-100-lines-of-code/).
@@ -78,7 +78,7 @@ This repo is a joint effort of [Jacopo](http://www.jacopotagliabue.it/),
  and [Marie](https://www.linkedin.com/in/marie-beaulieu-462949135/). 
 
 We wish to thank our friend [Piero Molino](https://github.com/w4nderlust), 
-[Ludwig](https://uber.github.io/ludwig/)'s creator, for showing
+[Ludwig](https://github.com/uber/ludwig)'s creator, for showing
 us how to re-write our model (_SessionPath_) with Ludwig. 
 
 ### How to Cite our Work
