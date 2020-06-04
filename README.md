@@ -4,7 +4,7 @@ _Personalized Category Suggestions for eCommerce Type-Ahead_
 
 ### Overview
 This repo contains working code from our blog post
-[Building personalized category suggestions with Ludwig](https://blog.coveo.com/clothes-in-space-real-time-personalization-in-less-than-100-lines-of-code/).
+[Building personalized category suggestions with Ludwig](https://blog.coveo.com/how-to-grow-a-product-tree/).
 By leveraging [Ludwig](https://uber.github.io/ludwig/api/LudwigModel/) capabilities, we implement an encoder-decoder architecture
 to provide personalized and dynamic _category suggestion_ to augment type-ahead API. 
 
@@ -18,7 +18,7 @@ factors as well (e.g. the products the user interacted with):
 ![Dynamic Category Suggestion Example](/images/personalized_category.png)
 
 Blog post and code are inspired by our [research paper](https://arxiv.org/abs/2005.12781) presented @ ACL 2020: 
-[How to Grow a (Product) Tree](https://blog.coveo.com/clothes-in-space-real-time-personalization-in-less-than-100-lines-of-code/).
+[How to Grow a (Product) Tree](https://blog.coveo.com/how-to-grow-a-product-tree/).
 
 ### Setup
 
@@ -84,9 +84,10 @@ us how to re-write our model (_SessionPath_) with Ludwig.
 ### How to Cite our Work
 
 If you find this repo (and the ideas in it) useful for your research, please cite our
-[ECNLP](https://sites.google.com/view/ecnlp/acl-2020?authuser=0) work @ ACL:
+[ECNLP](https://sites.google.com/view/ecnlp/acl-2020?authuser=0) work:
 
-```@inproceedings{TagliabueACL2020,
+```
+@inproceedings{TagliabueEtAlACL2020,
 author = {Tagliabue, Jacopo and Yu, Bingqing and Beaulieu, Marie},
 title = {How to Grow a (Product) Tree. Personalized Category Suggestions for eCommerce Type-Ahead},
 year = {2020},
