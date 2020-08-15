@@ -83,18 +83,23 @@ us how to re-write our model (_SessionPath_) with Ludwig.
 
 ### How to Cite our Work
 
-If you find this repo (and the ideas in it) useful for your research, please cite our
-[ECNLP](https://sites.google.com/view/ecnlp/acl-2020?authuser=0) work:
+If you find this repo (and the ideas in it) useful for your research, please cite our work:
 
 ```
-@inproceedings{TagliabueEtAlACL2020,
-author = {Tagliabue, Jacopo and Yu, Bingqing and Beaulieu, Marie},
-title = {How to Grow a (Product) Tree. Personalized Category Suggestions for eCommerce Type-Ahead},
-year = {2020},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-booktitle = {Companion Proceedings of ACL},
-location = {Seattle, USA}
+@inproceedings{tagliabue-etal-2020-grow,
+    title = "How to Grow a (Product) Tree: Personalized Category Suggestions for e{C}ommerce Type-Ahead",
+    author = "Tagliabue, Jacopo  and
+      Yu, Bingqing  and
+      Beaulieu, Marie",
+    booktitle = "Proceedings of The 3rd Workshop on e-Commerce and NLP",
+    month = jul,
+    year = "2020",
+    address = "Seattle, WA, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.ecnlp-1.2",
+    doi = "10.18653/v1/2020.ecnlp-1.2",
+    pages = "7--18",
+    abstract = "In an attempt to balance precision and recall in the search page, leading digital shops have been effectively nudging users into select category facets as early as in the type-ahead suggestions. In this work, we present SessionPath, a novel neural network model that improves facet suggestions on two counts: first, the model is able to leverage session embeddings to provide scalable personalization; second, SessionPath predicts facets by explicitly producing a probability distribution at each node in the taxonomy path. We benchmark SessionPath on two partnering shops against count-based and neural models, and show how business requirements and model behavior can be combined in a principled way.",
 }
 ```
 
