@@ -4,4 +4,4 @@ snowflake-connector-python==2.2.6
 ludwig==0.2.2.6
 ludwig[text]
 python-dotenv==0.9.1
-tensorflow==1.15.2
+tensorflow==1.15.4
